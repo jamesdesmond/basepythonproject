@@ -15,7 +15,7 @@ It supports
 - containerization DONE
 - secret injection
 - configuration
-- logging
+- logging DONE
 - testing DONE
 - linting DONE
 

@@ -13,4 +13,5 @@ repos:
     hooks:
     - id: mypy
       exclude: ^test/
+      additional_dependencies: ['types-PyYAML']
       args: [--strict]

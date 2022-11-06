@@ -1,4 +1,5 @@
 import logging
+import yaml
 
 # This is a sample Python script.
 
@@ -13,6 +14,7 @@ def print_hi(name: str) -> None:
 
 # Press the green button in the gutter to run the script.
 if __name__ == "__main__":
+    # Setup logging
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s %(levelname)s %(message)s",
@@ -20,6 +22,10 @@ if __name__ == "__main__":
         filemode="a",
     )
     logging.debug("Application Started")
+    # Load secrets
+    secrets = yaml.safe_load(open("config/secrets.yaml"))
+    logging.debug(f"{len(secrets)} Secrets loaded")
+    # print(secrets["userID"])
     print_hi("PyCharm")
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

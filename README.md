@@ -1,6 +1,7 @@
 This is a base project to be forked and used in later work.
 
 It supports
+
 - containerization
 - secret injection
 - configuration

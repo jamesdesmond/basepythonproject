@@ -1,23 +1,12 @@
 This is a base project to be forked and used in later work.
-# Project Structure 
-### generated with `tree ./ -I venv | sed 's/  / /' | pbcopy`
-./
-├── Dockerfile
-├── README.md
-├── pyproject.toml
-├── requirements.txt
-├── src
-│  └── main.py
-└── test
+It supports:
 
-It supports
-
-- containerization DONE
-- secret injection DONE
-- configuration DONE
-- logging DONE
-- testing DONE
-- linting DONE
+- containerization 
+- secret injection 
+- configuration 
+- logging 
+- testing 
+- linting 
 
 This project will be for scripts that run, and exit
 But I should extend this script for microservice HTTP/grpc/graphql type services
@@ -26,10 +15,6 @@ But I should extend this script for microservice HTTP/grpc/graphql type services
 `yaml` is used for storing secrets & config in `config/`. For secrets, they are stored in `config/secrets.yaml`. 
 The secrets file is read on startup, and an example of reading a value is provided. 
 The secrets file has also been added to the `.gitignore`.
-
-
-
-
 
 ## Logging
 `logging` is used for logging. Configuration is in main.py. Logs are written to: `log/python_script.log`
@@ -45,3 +30,23 @@ Not quite sure why the importing in the pytest configuration is not working
 `docker` is used for containerization.
 - `docker build -t imagename .` to build
 - `docker run imagename` to run
+
+
+# Project Structure 
+### generated with `tree ./ -I venv | sed 's/  / /' | pbcopy`
+```text
+./
+├── Dockerfile
+├── README.md
+├── config
+│  ├── basicConfig.yaml
+│  └── secrets.yaml
+├── log
+│  └── python_script.log
+├── pyproject.toml
+├── requirements.txt
+├── src
+│  └── main.py
+└── test
+    └── test_main.py
+```
